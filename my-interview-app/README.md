@@ -31,6 +31,7 @@ This project uses **React + Redux + TypeScript**, integrates **PDF parsing**, an
 ---
 
 ## 📂 Project Structure
+```
 my-interview-app/
 │── public/                  # Static assets (favicon, index.html, etc.)
 │
@@ -60,6 +61,7 @@ my-interview-app/
 ├── package.json
 ├── tsconfig.json
 └── README.md
+```
 
 
 ## 🎥 Demo Video
