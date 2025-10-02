@@ -74,7 +74,7 @@ my-interview-app/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/my-interview-app.git
+git clone https://github.com/Prashant-24-17/AI_Interview/tree/main/my-interview-app
 cd my-interview-app
 ```
 ### 2. Install dependencies
