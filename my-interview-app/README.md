@@ -32,20 +32,35 @@ This project uses **React + Redux + TypeScript**, integrates **PDF parsing**, an
 
 ## 📂 Project Structure
 my-interview-app/
-│── src/
-│ ├── components/
-│ │ └── IntervieweeView.tsx # Core UI for candidate interaction
-│ ├── redux/
-│ │ └── candidatesSlice.ts # Redux slice for profiles & evaluation
-│ ├── styles/
-│ │ └── index.css # Global styles & theme variables
-│ ├── App.tsx # Root component
-│ └── main.tsx # React entry point
+│── public/                  # Static assets (favicon, index.html, etc.)
 │
-├── public/ # Static assets
+│── src/
+│   ├── assets/              # Images, icons, fonts
+│   ├── components/          # Reusable UI components
+│   │   ├── IntervieweeView/ # Feature-specific component folder
+│   │   │   ├── index.tsx    # Main component
+│   │   │   └── styles.css   # Local styles (if needed)
+│   │   └── Common/          # Generic UI (buttons, inputs, loaders, etc.)
+│   │
+│   ├── features/            # Feature-based folders for Redux + logic
+│   │   └── candidates/
+│   │       ├── candidatesSlice.ts # Redux slice
+│   │       ├── types.ts          # Type definitions
+│   │       └── selectors.ts      # Selectors (optional)
+│   │
+│   ├── hooks/               # Custom React hooks (useSession, useTimer, etc.)
+│   ├── styles/              # Global styles (index.css, theme.css)
+│   ├── utils/               # Helper functions (AI prompts, API wrappers, etc.)
+│   ├── store/               # Redux store configuration
+│   │   └── index.ts
+│   ├── App.tsx              # Root component
+│   └── main.tsx             # React entry point
+│
+├── .gitignore
 ├── package.json
 ├── tsconfig.json
-└── README.md # Project documentation
+└── README.md
+
 
 ## 🎥 Demo Video
 [![Watch Demo](https://img.shields.io/badge/Watch-Demo-red?style=for-the-badge&logo=youtube)](https://drive.google.com/file/d/1l8DVhR-JnpC7DdeEDbHQ0yjV0ezkx_DT/view?usp=drive_link)
