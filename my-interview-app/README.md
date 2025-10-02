@@ -1,73 +1,73 @@
-# React + TypeScript + Vite
+# 🎯 AI Interview App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered interview preparation web app where candidates can upload their resume, answer AI-generated interview questions, and receive real-time evaluation with feedback and scoring.  
 
-Currently, two official plugins are available:
+This project uses **React + Redux + TypeScript**, integrates **PDF parsing**, and provides a clean **dark/light themed UI** for an engaging interview experience.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 📄 **Resume Upload & Parsing** – Upload PDF resumes, automatically extract candidate details.  
+- 🤖 **AI-Driven Questions** – Generate and ask interview questions interactively.  
+- 💬 **Chat-style Interface** – Candidate and bot messages displayed in a conversational UI.  
+- ⏱ **Timer Support** – Track time for each question to simulate real interview conditions.  
+- 📝 **Answer Recording** – Candidate responses stored for evaluation.  
+- 📊 **Evaluation System** – Assign difficulty, generate feedback, and calculate final score.  
+- 💾 **State Persistence** – Resume unfinished interviews from where you left off.  
+- 🎨 **Modern UI/UX** – Styled with responsive CSS and supports **dark/light themes**.  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Frontend:** React (with Hooks), TypeScript  
+- **State Management:** Redux Toolkit  
+- **Styling:** Custom CSS with theme variables  
+- **PDF Parsing:** `pdfjs-dist`  
+- **Utilities:** UUID for profile IDs  
+- **Version Control:** Git + GitHub  
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📂 Project Structure
+my-interview-app/
+│── src/
+│ ├── components/
+│ │ └── IntervieweeView.tsx # Core UI for candidate interaction
+│ ├── redux/
+│ │ └── candidatesSlice.ts # Redux slice for profiles & evaluation
+│ ├── styles/
+│ │ └── index.css # Global styles & theme variables
+│ ├── App.tsx # Root component
+│ └── main.tsx # React entry point
+│
+├── public/ # Static assets
+├── package.json
+├── tsconfig.json
+└── README.md # Project documentation
+
+## 🎥 Demo Video
+[![Watch Demo](https://img.shields.io/badge/Watch-Demo-red?style=for-the-badge&logo=youtube)](https://drive.google.com/file/d/1l8DVhR-JnpC7DdeEDbHQ0yjV0ezkx_DT/view?usp=drive_link)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=vercel)](https://ai-interview-six-kappa.vercel.app/)
+
+
+
+## ⚡ Getting Started
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/my-interview-app.git
+cd my-interview-app
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 2. Install dependencies
+```bash
+npm install
 ```
+### 3. Run the development server
+```bash
+npm run dev
+```
+App will be available at http://localhost:5173/
+
+NOTE: I Limit Question to 2 Because Of API Quota
